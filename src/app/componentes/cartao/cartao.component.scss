@@ -1,0 +1,47 @@
+.card-background-page {
+  height: 100%;
+
+  ion-card {
+    position: relative;
+    text-align: center;
+    border: 1px solid #3b3b3bd3;
+    border-radius: 10px;
+    height: 10rem;
+    transition: background-color 0.5s ease-in-out;
+    transition: box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+
+    .imagem {
+      height: 10rem;
+      width: 100%;
+      opacity: 0.16;
+    }
+  }
+
+  ion-card:hover {
+    background-color: #1919703d;
+    box-shadow: 0 0 10px #485E48;
+  }
+
+  .card-title {
+    position: absolute;
+    top: 30%;
+    font-size: 1.8em;
+    width: 100%;
+    font-weight: bold;
+    color: #485E48;
+  }
+
+  .card-subtitle {
+    font-size: 1.0em;
+    position: absolute;
+    top: 52%;
+    width: 100%;
+    color: #485E48;
+  }
+
+  i {
+    font-size: 2.3rem;
+  }
+
+}

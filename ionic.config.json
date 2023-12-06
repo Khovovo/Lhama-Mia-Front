@@ -1,0 +1,7 @@
+{
+  "name": "LhamaMia",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

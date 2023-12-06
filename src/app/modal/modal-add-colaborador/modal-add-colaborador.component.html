@@ -1,0 +1,68 @@
+<div class="exist">
+  <div class="col-12">
+    <h2>Novo Colaborador</h2>
+  </div>
+</div>
+
+<ion-content>
+  <div class="scrool-t">
+    <div class="formulario justify-content-center">
+      <form [formGroup]="formColab" (ngSubmit)="sub()">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="row">
+              <div class="col-sm-6">
+                <mat-form-field class="example-full-width" appearance="fill">
+                  <mat-label><i class="fa-solid fa-user"></i> Nome</mat-label>
+                  <input formControlName="NOME" matInput maxlength="120" type="text" />
+                </mat-form-field>
+                <span class="text-danger"
+                  *ngIf="(formColab.controls.NOME.touched || submitted) && formColab.controls.NOME.errors?.required">
+                  Campo Obrigatório. </span>
+              </div>
+
+              <div class="col-sm-6">
+                <mat-form-field class="example-full-width" appearance="fill">
+                  <mat-label><i class="fa-solid fa-envelope"></i> E-mail</mat-label>
+                  <input formControlName="EMAIL" matInput name="EMAIL" type="email" autocomplete="new-password" />
+                </mat-form-field>
+                <span class="text-danger"
+                  *ngIf="(formColab.controls.EMAIL.touched || submitted) && formColab.controls.EMAIL.errors?.required">
+                  Campo Obrigatório. </span>
+              </div>
+
+
+
+
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="row">
+            <div class="col-4 col-sm-4 center mb-2">
+              Acesso ao Sistema
+              <mat-slide-toggle formControlName="ACESSOSISTEMA" color="primary"></mat-slide-toggle>
+            </div>
+
+            <div class="col-4 col-sm-4 center mb-2">
+              Chefia
+              <mat-slide-toggle formControlName="CHEFIA" color="primary"> </mat-slide-toggle>
+            </div>
+
+            <div class="col-4 col-sm-4 center mb-2">
+              Status
+              <mat-slide-toggle formControlName="STATUS" color="primary"></mat-slide-toggle>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="btns">
+      <div>
+        <button class="cancel" (click)="dismiss(0)">Cancelar</button>
+        <button class="save" (click)="sub()">Criar</button>
+      </div>
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <app-cabecalho></app-cabecalho>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+
+
+  <main class="menu">
+
+    <ion-content class="card-background-page">
+      <div class="container">
+        
+
+        <mat-tab-group fitInkBarToContent [selectedIndex]="selected" (selectedTabChange)="selected = $event.index">
+
+          <mat-tab label="Mesas" >
+            <app-mesas (idMesa)="mesaSelecionada($event)"> </app-mesas>
+          </mat-tab>
+
+          <mat-tab label="Adicionar Pedidos"  [data]="comandaMesa" [disabled]="selected===0">
+            <app-adicionar-pedido (idAtualiza)="atualizaPedidosFilho($event)" > </app-adicionar-pedido>
+          </mat-tab>
+
+          <mat-tab label="Pedidos" [data]="comandaMesa" [disabled]="selected===0">
+            <app-pedidos></app-pedidos>
+          </mat-tab>
+
+          <mat-tab label="Pagamento" [data]="comandaMesa" [disabled]="selected===0">
+            <app-pagamentos></app-pagamentos>
+          </mat-tab>
+        </mat-tab-group>
+
+      </div>
+    </ion-content>
+
+
+  </main>
+</ion-content>

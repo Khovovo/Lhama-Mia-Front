@@ -1,0 +1,102 @@
+<ion-toolbar>
+  <div class="row">
+    <div class="col-12">
+      <ion-title slot="start" [routerLink]="['/home']">
+        <div class="logo"> <img src=""> Lhama Mia</div>
+      </ion-title>
+      <div class="botoes">
+
+        <div class="row">
+          <div class="col-md-4 col-sm-12">
+            <ion-buttons slot="primary" [routerLink]="['/home']">
+              <div class="menu-item">
+                <i class="fa-solid fa-house"></i>
+                <ion-label class="but">
+                  Home
+                </ion-label>
+              </div>
+            </ion-buttons>
+          </div>
+        </div>
+
+        <div class="row" [hidden]="!bAcesso">
+          <div class="col-md-4 col-sm-12">
+            <ion-buttons slot="primary" [routerLink]="['/colaboradores']">
+              <div class="menu-item">
+                <i class="fa-solid fa-id-card"></i>
+                <ion-label class="but">
+                  Colaboradores
+                </ion-label>
+              </div>
+            </ion-buttons>
+          </div>
+        </div>
+
+        <div class="row" [hidden]="!bAcesso">
+          <div class="col-md-4 col-sm-12">
+            <ion-buttons slot="primary" [routerLink]="['/relatorios']">
+              <div class="menu-item">
+                <i class="fa-solid fa-line-chart"></i>
+                <ion-label class="but">Relatórios
+
+                </ion-label>
+              </div>
+            </ion-buttons>
+          </div>
+        </div>
+
+        <div class="row" >
+          <div class="col-md-4 col-sm-12">
+            <ion-buttons slot="primary" [routerLink]="['/cozinha']">
+              <div class="menu-item">
+                <i class="fa-solid fa-cutlery"></i>
+                <ion-label class="but">
+                  <!-- <mat-label><ion-icon name="briefcase"></ion-icon> Função</mat-label> -->
+                  Cozinha
+                </ion-label>
+              </div>
+            </ion-buttons>
+          </div>
+        </div>
+
+
+        <div class="row" >
+          <div class="col-md-4 col-sm-12">
+            <ion-buttons slot="primary" [routerLink]="['/restaurante']">
+              <div class="menu-item">
+                <i class="fa-solid fa-table"></i>
+                <ion-label class="but">
+                  Mesas
+                </ion-label>
+              </div>
+            </ion-buttons>
+          </div>
+        </div>
+
+        <div class="row" >
+          <div class="col-md-4 col-sm-12">
+            <ion-buttons slot="primary" [routerLink]="['/cardapio']">
+              <div class="menu-item">
+                <i class="fa-solid fa-rectangle-list"></i>
+                <ion-label class="but">
+                  Cardapio
+                </ion-label>
+              </div>
+            </ion-buttons>
+          </div>
+        </div>
+
+      </div>
+      <ion-title style="width: 100%;">
+        <div class="menu-item-sair" (click)="presentAlertConfirm()">
+          <div class="item-sair">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <ion-label>
+              Sair
+            </ion-label>
+          </div>
+        </div>
+      </ion-title>
+    </div>
+  </div>
+</ion-toolbar>

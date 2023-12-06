@@ -1,0 +1,76 @@
+
+ion-content>div {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ion-content div form {
+  max-width: 420px;
+  width: 100%;
+  padding: 50px 20px;
+  background-color: #fff;
+}
+
+ion-content div form .logo {
+  text-align: center;
+  margin-bottom: 30%;
+}
+
+ion-content div form .logo label {
+  font-size: 35px;
+  font-weight: 600;
+}
+
+ion-content div form .section-end {
+  div {
+    width: 100%;
+    text-align: right;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  button {
+    margin-top: 30px;
+  }
+}
+
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex {
+  background-color: #fff;
+}
+
+.example-form {
+  min-width: 150px;
+  width: 100%;
+}
+
+.label {
+  color: black;
+  font-weight: 500;
+
+  i {
+    color: #485E48;
+  }
+}
+
+.example-full-width {
+  width: 100%;
+
+  .eye {
+    color: #485E48;
+    position: absolute;
+    right: 0px;
+  }
+}
+
+@media (min-width: 500px) {
+  ion-content>div {
+    background-color: #485E48;
+  }
+
+  ion-content div form {
+    border-radius: 15px;
+  }
+}

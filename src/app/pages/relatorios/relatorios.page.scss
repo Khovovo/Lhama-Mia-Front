@@ -1,0 +1,157 @@
+.titulo {
+    padding: 20px 0px 0px 20px;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #191970;
+    background: #ffffff;
+    text-shadow: 1px 0px 1px #cccccc, 0px 1px 1px #eeeeee, 2px 1px 1px #cccccc, 1px 2px 1px #eeeeee, 3px 2px 1px #cccccc, 2px 3px 1px #eeeeee, 4px 3px 1px #cccccc,
+      3px 4px 1px #eeeeee, 5px 4px 1px #cccccc, 4px 5px 1px #eeeeee, 6px 5px 1px #cccccc, 5px 6px 1px #eeeeee, 7px 6px 1px #cccccc;
+  }
+  .menu {
+    margin-block-end: auto;
+    margin-top: 2rem;
+    height: 600px;
+  }
+  .demo-table {
+    width: 100%;
+  }
+  .card-background-page {
+    height: 100%;
+  
+    ion-card {
+      position: relative;
+      text-align: center;
+      border: 1px solid #3b3b3bd3;
+      border-radius: 10px;
+      height: 10rem;
+      transition: background-color 0.5s ease-in-out;
+      transition: box-shadow 0.3s ease-in-out;
+      cursor: pointer;
+  
+      .imagem {
+        height: 10rem;
+        width: 100%;
+        opacity: 0.16;
+      }
+    }
+  
+    ion-card:hover {
+      background-color: #1919703d;
+      box-shadow: 0 0 10px #191970;
+    }
+  
+    .card-title {
+      position: absolute;
+      top: 30%;
+      font-size: 1.8em;
+      width: 100%;
+      font-weight: bold;
+      color: #191970;
+    }
+  
+    .card-subtitle {
+      font-size: 1em;
+      position: absolute;
+      top: 52%;
+      width: 100%;
+      color: #191970;
+    }
+  
+    i {
+      font-size: 2.3rem;
+    }
+  }
+  table {
+    width: 100%;
+  }
+  
+  .mat-mdc-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+  
+  td,
+  th {
+    width: 25%;
+  }
+  .titulo {
+    padding: 20px 0px 0px 20px;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #191970;
+    background: #ffffff;
+    text-shadow: 1px 0px 1px #cccccc, 0px 1px 1px #eeeeee, 2px 1px 1px #cccccc, 1px 2px 1px #eeeeee, 3px 2px 1px #cccccc, 2px 3px 1px #eeeeee, 4px 3px 1px #cccccc,
+      3px 4px 1px #eeeeee, 5px 4px 1px #cccccc, 4px 5px 1px #eeeeee, 6px 5px 1px #cccccc, 5px 6px 1px #eeeeee, 7px 6px 1px #cccccc;
+  }
+  .menu {
+    margin-block-end: auto;
+    margin-top: 2rem;
+    height: 600px;
+  }
+  .demo-table {
+    width: 100%;
+  }
+  .card-background-page {
+    height: 100%;
+  
+    ion-card {
+      position: relative;
+      text-align: center;
+      border: 1px solid #3b3b3bd3;
+      border-radius: 10px;
+      height: 10rem;
+      transition: background-color 0.5s ease-in-out;
+      transition: box-shadow 0.3s ease-in-out;
+      cursor: pointer;
+  
+      .imagem {
+        height: 10rem;
+        width: 100%;
+        opacity: 0.16;
+      }
+    }
+  
+    ion-card:hover {
+      background-color: #1919703d;
+      box-shadow: 0 0 10px #191970;
+    }
+  
+    .card-title {
+      position: absolute;
+      top: 30%;
+      font-size: 1.8em;
+      width: 100%;
+      font-weight: bold;
+      color: #191970;
+    }
+  
+    .card-subtitle {
+      font-size: 1em;
+      position: absolute;
+      top: 52%;
+      width: 100%;
+      color: #191970;
+    }
+  
+    i {
+      font-size: 2.3rem;
+    }
+  }
+  table {
+    width: 100%;
+  }
+  
+  .mat-mdc-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+  
+  td,
+  th {
+    width: 25%;
+  }
+  
+  .card {
+    padding: 1rem;
+  }
+  

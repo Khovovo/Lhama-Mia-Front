@@ -1,0 +1,311 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+.text-danger {
+  font-size: 13px;
+  font-weight: 700;
+  position: relative;
+  bottom: 15px;
+}
+
+.alertTest {
+  div {
+    display: flex;
+    justify-content: center;
+  }
+
+  .alert-button-group.sc-ion-alert-md {
+    padding: 5px;
+    justify-content: space-around;
+  }
+
+  .red {
+    color: red;
+
+  }
+}
+
+.mat-tooltip {
+  background-color: #539e53;
+  font-weight: 500;
+}
+
+.mat-form-field-type-mat-date-range-input .mat-form-field-infix {
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+
+.mat-form-field-appearance-outline .mat-form-field-outline {
+  color: #1919708a;
+}
+
+.mat-datepicker-actions {
+  justify-content: space-between !important;
+}
+
+.mat-calendar-body-selected {
+  background-color: #539e53;
+  color: #485E48;
+  font-weight: 500;
+}
+
+.mat-calendar-body-cell-content,
+.mat-date-range-input-separator {
+  font-weight: 600;
+}
+
+.mat-calendar-body-in-range::before {
+  background: #19197059;
+}
+
+.mat-date-range-input-container {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+
+.btn-primary-p {
+  background-color: #E23B17;
+  color: #fff;
+  font-weight: 500;
+  padding: 10px 20px;
+  font-size: 20px;
+  width: 100%;
+  border-radius: 50px;
+}
+
+.modal-novo-departamento{
+  background-color: rgba(0, 0, 0, 0.158);
+  box-shadow: none;
+
+  &::part(content) {
+    width: 250px;
+    height: 200px;
+    box-shadow: none;
+  }
+}
+  .modal-nova-funcao{
+    background-color: rgba(0, 0, 0, 0.158);
+    box-shadow: none;
+    border: 1px solid 485E48;
+
+    &::part(content) {
+      width: 400px;
+      height: 350px;
+      box-shadow: none;
+    }
+  }
+.modal-formularios-enviados {
+  background-color: rgba(0, 0, 0, 0.158);
+  box-shadow: none;
+
+  &::part(content) {
+    border-radius: 5px;
+    width: 1000px;
+    height: 600px;
+    padding: 1%;
+    box-shadow: none;
+  }
+}
+
+.modal-nova-pergunta {
+  background-color: rgba(0, 0, 0, 0.158);
+  box-shadow: none;
+
+  &::part(content) {
+    width: 900px;
+    height: 500px;
+    box-shadow: none;
+  }
+}
+
+.modal-edit-colab {
+  background-color: rgba(0, 0, 0, 0.158);
+  box-shadow: none;
+
+  &::part(content) {
+    width: 900px;
+    height: 500px;
+    box-shadow: none;
+  }
+}
+
+.modal-clone {
+  background-color: rgba(0, 0, 0, 0.158);
+  box-shadow: none;
+
+  &::part(content) {
+    width: 900px;
+    height: 500px;
+    box-shadow: none;
+  }
+}
+
+.modal-quest {
+  background-color: rgba(0, 0, 0, 0.158);
+  box-shadow: none;
+
+  &::part(content) {
+    width: 95%;
+    height: 90%;
+    box-shadow: none;
+  }
+}
+
+.modal-perfil {
+  background-color: rgba(0, 0, 0, 0.158);
+  box-shadow: none;
+
+  &::part(content) {
+    width: 25rem;
+    height: 30rem;
+    ;
+    box-shadow: none;
+  }
+}
+
+.modal-dashboard {
+  background-color: rgba(0, 0, 0, 0.158);
+  box-shadow: none;
+  border-radius: 5px;
+
+  &::part(content) {
+    width: 1100px;
+    height: 600px;
+    box-shadow: none;
+  }
+}
+
+@media (min-width: 770px) {
+  .modal-novo-colab {
+    background-color: rgba(0, 0, 0, 0.158);
+    box-shadow: none;
+
+    &::part(content) {
+      width: 900px;
+      height: 500px;
+      box-shadow: none;
+    }
+  }
+
+  .modal-perfil {
+    background-color: rgba(0, 0, 0, 0.158);
+    box-shadow: none;
+
+    &::part(content) {
+      width: 25rem;
+      height: 30rem;
+      box-shadow: none;
+    }
+  }
+
+}
+
+@media (max-width: 770px) {
+  .modal-formularios-enviados {
+    background-color: rgba(0, 0, 0, 0.158);
+    box-shadow: none;
+
+    &::part(content) {
+      width: 900px;
+      height: 500px;
+      box-shadow: none;
+    }
+  }
+
+  .modal-nova-pergunta {
+    background-color: rgba(0, 0, 0, 0.158);
+    box-shadow: none;
+
+    &::part(content) {
+      width: 900px;
+      height: 500px;
+      box-shadow: none;
+    }
+  }
+
+
+  
+ 
+  
+  
+  .modal-edit-colab {
+    background-color: rgba(0, 0, 0, 0.158);
+    box-shadow: none;
+
+    &::part(content) {
+      width: 900px;
+      height: 500px;
+      box-shadow: none;
+    }
+  }
+
+  .modal-clone {
+    background-color: rgba(0, 0, 0, 0.158);
+    box-shadow: none;
+
+    &::part(content) {
+      width: 900px;
+      height: 500px;
+      box-shadow: none;
+    }
+  }
+
+  .modal-quest {
+    background-color: rgba(0, 0, 0, 0.158);
+    box-shadow: none;
+
+    &::part(content) {
+      width: 900px;
+      height: 500px;
+      box-shadow: none;
+    }
+  }
+
+  .modal-perfil {
+    background-color: rgba(0, 0, 0, 0.158);
+    box-shadow: none;
+
+    &::part(content) {
+      width: 25rem;
+      height: 30rem;
+      box-shadow: none;
+    }
+  }
+
+  .modal-dashboard {
+    background-color: rgba(0, 0, 0, 0.158);
+    box-shadow: none;
+
+    &::part(content) {
+      width: 900px;
+      height: 500px;
+      box-shadow: none;
+    }
+  }
+}

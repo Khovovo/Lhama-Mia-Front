@@ -1,0 +1,40 @@
+<ion-content>
+  <div>
+    <form [formGroup]="loginForm" (ngSumit)="loginSub()">
+      <div class="logo">
+
+        <label><img src="">Lhama Mia</label>
+      </div>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label class="label"><i class="fa-solid fa-envelope"></i> E-mail</mat-label>
+        <input formControlName="email" name="email" type="email" matInput>
+      </mat-form-field>
+      <span class="text-danger"
+        *ngIf="(loginForm.controls.email.touched || submitted ) && loginForm.controls.email.errors?.required">
+           Campo Obrigatório.
+      </span>
+      <span class="text-danger" *ngIf="loginForm.controls.email.touched && loginForm.controls.email.errors?.email">
+        E-mail inválido
+      </span>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label class="label"><i class="fa-solid fa-lock"></i> Senha</mat-label>
+        <input formControlName="senha" [type]="show ? 'text' : 'password'" name="senha" matInput>
+        <a class="eye" (click)="password()">
+          <i *ngIf="show" class="fa-solid fa-eye"></i> <i *ngIf="!show" class="fa-solid fa-eye-slash"></i>
+        </a>
+      </mat-form-field>
+      <span class="text-danger "
+        *ngIf="(loginForm.controls.senha.touched || submitted) && loginForm.controls.senha.errors?.required">
+        Campo Obrigatório.
+      </span>
+      <span class="text-danger"
+        *ngIf="(loginForm.controls.senha.touched || submitted) && loginForm.get('senha').hasError('minlength')">
+        A senha deve ter no mínimo 8 caracteres
+      </span>
+      <div class="section-end">
+        <button class="btn-primary-p" type="submit" (click)='loginSub()' >Entrar</button>
+      </div>
+
+    </form>
+  </div>
+</ion-content>

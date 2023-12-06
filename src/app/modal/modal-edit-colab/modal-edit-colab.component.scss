@@ -1,0 +1,126 @@
+.exist {
+    width: 100%;
+    padding: 10px 20px 20px 20px;
+    h2 {
+        margin-bottom: 0px;
+    }
+}
+
+::ng-deep .button-native {
+    padding: 0px !important;
+}
+
+.exist ion-icon {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.icons {
+    display: flex;
+    justify-content: flex-end;
+
+    ion-icon {
+        color: #109CF1;
+        font-size: 30px;
+        margin-right: 20px
+    }
+}
+
+.example-full-width {
+    width: 100%;
+}
+
+.scrool-t {
+    width: 100%;
+    height: 100%;
+    padding: 0px 15px 15px 15px;
+    overflow-y: auto;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.scrool-t::-webkit-scrollbar {
+    display: none;
+}
+
+.add {
+    width: 100%;
+
+    button {
+        widows: 100%;
+        text-align: center;
+        padding: 10px 0px;
+    }
+}
+
+textarea {
+    border: 2px solid #109CF1;
+    border-radius: 5px;
+}
+
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex {
+    padding: 0px;
+}
+
+.example-full-width mat-label {
+    color: #109CF1;
+}
+
+.formulario {
+    width: 100%;
+}
+.btns {
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    padding: 20px;
+    bottom: 0px;
+    div {
+        display: flex;
+        justify-content: space-around;
+        .cancel {
+            background-color: #afb2b4;
+            color: #fff;
+            font-weight: 500;
+            padding: 10px 20px;
+            border-radius: 5px;
+            width: 100px;
+            text-align: center;
+        }
+
+        .save {
+            background-color: #109CF1;
+            color: #fff;
+            font-weight: 500;
+            padding: 10px 20px;
+            border-radius: 5px;
+            width: 100px;
+            text-align: center;
+        }
+
+        .email {
+            background-color: #17d820;
+            color: #fff;
+            font-weight: 500;
+            padding: 10px 20px;
+            border-radius: 5px;
+            width: 100px;
+            text-align: center;
+        }
+    }
+}
+
+.flex-slide {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    mat-slide-toggle {
+        margin-left: 10px;
+    }
+}

@@ -1,0 +1,102 @@
+<ion-header>
+  <ion-toolbar>
+      <app-cabecalho></app-cabecalho>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="col-12 mt-3">
+    <div class="row" style="margin:1%;">
+      <div class="col-sm-5">
+        <mat-form-field style="width:100% ;" appearance="standard">
+          <mat-label>Busca</mat-label>
+          <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia" #input [(ngModel)]="sInputFltrado">
+          <!-- <mat-icon class="icon">search</mat-icon> -->
+          <button *ngIf="sInputFltrado" matSuffix mat-icon-button aria-label="Clear" (click)="apagarTexto()">
+            <mat-icon>close</mat-icon>
+          </button>
+        </mat-form-field>
+      </div>
+      <div class="col-8 col-sm-4">
+        <mat-form-field appearance="fill">
+          <mat-label>Status</mat-label>
+          <select matNativeControl (change)="exibir($event)" #filtroStatus [disabled]="bBloquearFiltroStatus" 
+          style="color: #222; font-weight: 600;">
+            <option *ngFor="let currency of currencies" [value]="currency.value" [selected]="currency.value === 'Ativ'">
+              {{currency.text}}
+            </option>
+          </select>
+        </mat-form-field>
+      </div>
+      <div class="col-4 col-sm-3">
+        <div class="d-flex justify-content-end">
+          <button 
+          class="add animate__animated animate__tada" 
+          (click)="openModal()" 
+          (mouseover)="passouMouseColaborador()" 
+          (mouseleave)="tirouMouseColaborador()">
+          <i 
+            class="fa-solid fa-id-card-clip" 
+            [@encolherIcone]="mouseNovoColaboradorPressionado"></i>
+          <p 
+            class="subtitulo-icone"
+            [@aumentarNome]="mouseNovoColaboradorPressionado"
+            >Adicionar colaborador</p>
+        </button>
+        </div>
+      </div>
+      <div class="col-12">
+        <div style="width:100%; overflow-y:auto ;">
+          <table mat-table #sortFirst="matSort" [dataSource]="dataSource" matSort
+          matSortActive="NOME" matSortDisableClear matSortDirection="asc"
+          class="animate__animated animate__fadeIn">
+
+            <ng-container matColumnDef="NOME">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> Colaboradores </th>
+              <td mat-cell style="cursor: pointer;" *matCellDef="let row" (click)="edit(row)"> {{row.NOME}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="EMAIL">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> E-mail </th>
+              <td mat-cell style="cursor: pointer;" *matCellDef="let row" (click)="edit(row)"> {{row.EMAIL}} </td>
+            </ng-container>
+
+
+            <ng-container matColumnDef="ACESSOSISTEMA">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> Acesso ao<br> Sistema </th>
+              <td mat-cell *matCellDef="let row">
+                <mat-slide-toggle (change)="acesso($event,row.IDCOL)" color="primary" [(ngModel)]="row.ACESSOSISTEMA">
+                </mat-slide-toggle>
+              </td>
+            </ng-container>
+
+            <ng-container matColumnDef="CHEFIA">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> Chefia </th>
+              <td mat-cell *matCellDef="let row">
+                <!-- <mat-slide-toggle color="primary" (click)="Chefia($event,row.IDCOL)" [(ngModel)]="row.CHEFIA"> -->
+                <mat-slide-toggle color="primary" (change)="editChefia($event,row.IDCOL)" [(ngModel)]="row.CHEFIA">
+                </mat-slide-toggle>
+              </td>
+            </ng-container>
+
+            <ng-container matColumnDef="STATUS">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> Status </th>
+              <td mat-cell *matCellDef="let row">
+                <mat-slide-toggle color="primary" (change)="status($event,row.IDCOL)" [(ngModel)]="row.STATUS">
+                </mat-slide-toggle>
+              </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+            <tr class="mat-row" *matNoDataRow>
+              <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+            </tr>
+          </table>
+        </div>
+        <mat-paginator #paginatorFirst [pageSizeOptions]="[5, 10, 25, 100]">
+        </mat-paginator>
+      </div>
+    </div>
+  </div>
+</ion-content>

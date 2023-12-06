@@ -1,0 +1,84 @@
+.icon {
+  position: absolute;
+  right: 0px;
+  bottom: 5px;
+}
+
+table {
+  width: 100%;
+  min-width: 1070px;
+}
+
+.mat-form-field {
+  font-size: 14px;
+}
+
+::ng-deep.mat-sort-header-content {
+  font-weight: 600;
+}
+
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex {
+  background-color: #fff;
+}
+
+.add {
+  border-radius: 10px;
+  width: 150px;
+  height: 55px;
+  box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.548);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.201);
+  background-color: #f1f1f1;
+
+  mat-icon {
+    color: #191970;
+    width: 32px;
+    height: 32px;
+    font-size: 32px;
+  }
+
+  i {
+    position: absolute;
+    font-size: 30px;
+    color: #191970;
+  }
+
+  .subtitulo-icone {
+    margin: 2px 0 0 0;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    top: 30px;
+    color: #191970;
+  }
+}
+
+.add:hover {
+  background-color: #1919703c;
+}
+
+@media (min-width: 600px) {
+  ion-toolbar {
+    ion-title {
+      margin-left: 5%;
+    }
+  }
+
+  ion-buttons {
+    margin-right: 5%;
+  }
+}
+
+.mat-form-field-type-mat-native-select .mat-form-field-infix::after {
+  color: red;
+}
+
+.tooltip-color {
+  background: rgba(26, 26, 112, 0.616);
+  color: #e7e7e7;
+}

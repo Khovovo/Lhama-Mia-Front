@@ -1,0 +1,14 @@
+<ion-header>
+    <ion-toolbar>
+        <app-cabecalho></app-cabecalho>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+
+    <header *ngIf="nomeUsuario">
+        <h1 class="titulo animate__animated animate__slideInLeft">Bem-vindo(a) {{nomeUsuario}} ao Lhama Mia</h1>
+    </header>
+    <main class="menu">
+        <app-cartao></app-cartao>
+    </main>
+</ion-content>

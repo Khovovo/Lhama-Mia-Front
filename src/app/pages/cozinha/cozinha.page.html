@@ -1,0 +1,149 @@
+<ion-header>
+  <ion-toolbar>
+    <app-cabecalho></app-cabecalho>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+
+  <header>
+    <h1 class="titulo animate__animated animate__slideInLeft">Cozinha</h1>
+  </header>
+  <main class="menu">
+
+    <ion-content class="card-background-page">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-12" style="background-color: transparent;">
+
+            <div class="card mb-3">
+              <table mat-table [dataSource]="dataSourceSolicitado" matSort>
+
+
+                <ng-container matColumnDef="CodItem">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header>CodItem</th>
+                  <td mat-cell style="cursor: pointer;" *matCellDef="let row">
+                    {{row.idItem}}</td>
+                </ng-container>
+
+                <ng-container matColumnDef="Nome">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header>Nome</th>
+                  <td mat-cell *matCellDef="let row">{{row.item.nomeItem}}</td>
+                </ng-container>
+
+                <ng-container matColumnDef="QTD">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header>QTD</th>
+                  <td mat-cell *matCellDef="let row">{{row.quantidade}}</td>
+                </ng-container>
+
+                <ng-container matColumnDef="Aceitar">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header>Aceitar</th>
+                  <td mat-cell style="cursor: pointer;" *matCellDef="let row">
+                    <button (click)="atualizaStatus(row,'Em Andamento')" style="background-color: transparent;color: rgb(62, 170, 68);" mat-icon-button>
+                      <mat-icon>done</mat-icon>
+                    </button>
+                  </td>
+                  <!-- <mat-icon>delete</mat-icon> -->
+                </ng-container>
+
+                <ng-container matColumnDef="Recusar">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header>Recusar</th>
+                  <td mat-cell style="cursor: pointer;" *matCellDef="let row">
+                    <button (click)="recusarPedido(row)" style="background-color: transparent;color: red;" mat-icon-button>
+                      <mat-icon>close</mat-icon>
+                    </button>
+                  </td>
+                  <!-- <mat-icon>delete</mat-icon> -->
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+
+              </table>
+              <mat-paginator #paginatorSolicitados="matPaginator" [pageSizeOptions]="[5, 10, 25, 100]"
+                aria-label="Páginas exibidas de Solicitado"></mat-paginator>
+            </div>
+          </div>
+
+
+          <div class="col-md-6">
+            <div class="card mb-3">
+              <table mat-table [dataSource]="dataSourceEmAndamento" matSort>
+
+
+                <ng-container matColumnDef="CodItem">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header>CodItem</th>
+                  <td mat-cell style="cursor: pointer;" *matCellDef="let row">
+                    {{row.idItem}}</td>
+                </ng-container>
+
+                <ng-container matColumnDef="Nome">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header>Nome</th>
+                  <td mat-cell *matCellDef="let row">{{row.item.nomeItem}}</td>
+                </ng-container>
+
+                <ng-container matColumnDef="QTD">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header>QTD</th>
+                  <td mat-cell *matCellDef="let row">{{row.quantidade}}</td>
+                </ng-container>
+
+                <ng-container matColumnDef="Finalizar">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header>Finalizar</th>
+                  <td mat-cell style="cursor: pointer;" *matCellDef="let row">
+                    <button (click)="atualizaStatus(row,'Prontos')" style="
+            background-color: transparent;
+            color: rgb(62, 170, 68);" mat-icon-button>
+                      <mat-icon>check_circle</mat-icon>
+                    </button>
+                  </td>
+                </ng-container>
+                <tr mat-header-row *matHeaderRowDef="displayedColumns2"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns2;"></tr>
+              </table>
+              <mat-paginator #paginatorEmAndamento="matPaginator" [pageSizeOptions]="[5, 10, 25, 100]"
+                aria-label="Páginas exibidas em Preparo"></mat-paginator>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+
+            <div class="card">
+              <table mat-table [dataSource]="dataSourceProntos" matSort>
+
+
+                <ng-container matColumnDef="CodItem">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header>CodItem</th>
+                  <td mat-cell style="cursor: pointer;" *matCellDef="let row">
+                    {{row.idItem}}</td>
+                </ng-container>
+
+                <ng-container matColumnDef="Nome">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header>Nome</th>
+                  <td mat-cell *matCellDef="let row">{{row.item.nomeItem}}</td>
+                </ng-container>
+
+                <ng-container matColumnDef="QTD">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header>QTD</th>
+                  <td mat-cell *matCellDef="let row">{{row.quantidade}}</td>
+                </ng-container>
+
+
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumns3"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns3;"></tr>
+
+
+              </table>
+              <mat-paginator #paginatorProntos="matPaginator" [pageSizeOptions]="[5, 10, 25, 100]"
+                aria-label="Páginas exibidas Finalizados"></mat-paginator>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </ion-content>
+
+
+  </main>
+</ion-content>

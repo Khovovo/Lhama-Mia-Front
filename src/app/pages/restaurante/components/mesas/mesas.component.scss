@@ -1,0 +1,27 @@
+.card_mesas {
+    width: 2rem;
+    border: 1px solid #33333398;
+    border-radius: 5px;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+    background-color: #1D391D;
+    color: #f6f6f6;
+    cursor: pointer;
+
+    p{
+        margin: 0;
+        font-size: 1rem;
+        font-weight: 600;
+        padding-bottom: 10px;
+    }
+}
+
+.mesas{
+    background-color: #F1D2CA;
+    border-radius: 5px;
+    padding: 1rem;
+
+}

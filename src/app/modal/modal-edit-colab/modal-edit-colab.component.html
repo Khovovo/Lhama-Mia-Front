@@ -1,0 +1,51 @@
+<div class="exist">
+  <div class="col-12">
+    <h2>Editar Colaborador</h2>
+  </div>
+</div>
+
+<ion-content>
+  <div class="scrool-t">
+    <div class="formulario">
+      <div class="row">
+        <div class="col-12">
+          <form [formGroup]="formColab" (ngSumit)="sub()">
+            <div class="row">
+              <div class="col-sm-12">
+                <mat-form-field class="example-full-width" appearance="fill">
+                  <mat-label><i class="fa-solid fa-envelope"></i> E-mail</mat-label>
+                  <input formControlName="EMAIL"  matInput type="email" />
+                </mat-form-field>
+                <span class="text-danger"
+                *ngIf="(formColab.controls.EMAIL.touched || submitted ) && formColab.controls.EMAIL.errors?.required">
+                   Campo Obrigatório.
+                </span>
+              </div>
+              <div class="col-sm-6">
+                <mat-form-field class="example-full-width" appearance="fill">
+                  <mat-label><i class="fa-solid fa-user"></i> Nome</mat-label>
+                  <input formControlName="NOME" matInput maxlength="120" type="text" />
+                </mat-form-field>
+                <span class="text-danger"
+                *ngIf="(formColab.controls.NOME.touched || submitted ) && formColab.controls.NOME.errors?.required">
+                   Campo Obrigatório.
+                </span>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="btns">
+     <div>
+      <button class="cancel" (click)="dismiss(0)">
+        Cancelar
+      </button>
+
+      <button class="save" (click)="sub()">
+        Salvar
+      </button>
+     </div>
+    </div>
+  </div>
+</ion-content>

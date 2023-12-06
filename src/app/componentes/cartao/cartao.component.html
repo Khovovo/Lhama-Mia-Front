@@ -1,0 +1,59 @@
+<ion-content class="card-background-page">
+  <div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-2 col-sm-6" [hidden]="!bAcesso">
+      <ion-card [routerLink]="['/colaboradores']" class="animate__animated animate__flipInX">
+        <img class="imagem" src="./assets/image/Colaboradores-bg.svg" />
+        <div class="card-title">
+          <i class="fa-solid fa-id-card"></i>
+          <p class="mt-3">Colaboradores</p>
+        </div>
+      </ion-card>
+    </div>
+ 
+
+    <div class="col-md-2 col-sm-6" [hidden]="!bAcesso">
+      <ion-card [routerLink]="['/relatorios']" class="animate__animated animate__flipInX">
+        <img class="imagem" src="./assets/image/Dashboard-bg.svg" />
+        <div class="card-title">
+          <i class="fa-solid fa-line-chart"></i>
+          <p class="mt-3">Relatórios</p>
+        </div>
+      </ion-card>
+    </div>
+
+    <div class="col-md-2 col-sm-6">
+      <ion-card [routerLink]="['/cozinha']" class="animate__animated animate__flipInX">
+        <img class="imagem" src="./assets/image/Cozinha-bg.svg" />
+        <div class="card-title">
+          <i class="fa-solid fa-cutlery"></i>
+          <p class="mt-3">Cozinha</p>
+        </div>
+      </ion-card>
+    </div>
+
+    <div class="col-md-2 col-sm-6" >
+      <ion-card [routerLink]="['/restaurante']" class="animate__animated animate__flipInX">
+        <img class="imagem" src="./assets/image/Formulario-bg.svg" />
+        <div class="card-title">
+          <i class="fa-solid fa-table"></i>
+          <p class="mt-3">Mesas</p>
+        </div>
+      </ion-card>
+    </div>
+    
+
+    <div class="col-md-2 col-sm-6">
+      <ion-card [routerLink]="['/cardapio']"  class="animate__animated animate__flipInX">
+        <img class="imagem" src="./assets/image/Perfil-bg.svg" />
+        <div class="card-title">
+          <i class="fa-regular fa-rectangle-list"></i>
+          <p class="mt-3">Cardapio</p>
+        </div>
+      </ion-card>
+    </div>
+
+    <div class="col-md-1"></div>
+  </div>
+
+</ion-content>
